@@ -1,0 +1,156 @@
+
+  <div class="container">
+    <form [formGroup]="form" (ngSubmit)="onSubmit()">
+      <div>
+        <label for="razaoSocial">Razão Social</label>
+        <input type="text" id="razaoSocial" formControlName="razaoSocial" />
+        <div
+          class="error"
+          *ngIf="
+            form.controls['razaoSocial'].invalid &&
+            form.controls['razaoSocial'].touched
+          "
+        >
+          {{ getErrorMessage("razaoSocial") }}
+        </div>
+      </div>
+
+      <div>
+        <label for="cpfCnpj">CPF/CNPJ</label>
+        <input type="text" id="cpfCnpj" formControlName="cpfCnpj" />
+        <div
+          class="error"
+          *ngIf="
+            form.controls['cpfCnpj'].invalid && form.controls['cpfCnpj'].touched
+          "
+        >
+          {{ getErrorMessage("cpfCnpj") }}
+        </div>
+      </div>
+
+      <div>
+        <label for="dataNascimento">Data de Nascimento</label>
+        <input
+          type="date"
+          id="dataNascimento"
+          formControlName="dataNascimento"
+        />
+        <div
+          class="error"
+          *ngIf="
+            form.controls['dataNascimento'].invalid &&
+            form.controls['dataNascimento'].touched
+          "
+        >
+          {{ getErrorMessage("dataNascimento") }}
+        </div>
+      </div>
+
+      <div>
+        <label for="telefone">Telefone</label>
+        <input type="tel" id="telefone" formControlName="telefone" />
+        <div
+          class="error"
+          *ngIf="
+            form.controls['telefone'].invalid &&
+            form.controls['telefone'].touched
+          "
+        >
+          {{ getErrorMessage("telefone") }}
+        </div>
+      </div>
+
+      <div>
+        <label for="email">Email</label>
+        <input type="email" id="email" formControlName="email" />
+        <div
+          class="error"
+          *ngIf="
+            form.controls['email'].invalid && form.controls['email'].touched
+          "
+        >
+          {{ getErrorMessage("email") }}
+        </div>
+      </div>
+
+      <div>
+        <label for="cep">CEP</label>
+        <input type="text" id="cep" formControlName="cep" />
+        <div
+          class="error"
+          *ngIf="form.controls['cep'].invalid && form.controls['cep'].touched"
+        >
+          {{ getErrorMessage("cep") }}
+        </div>
+      </div>
+
+      <div>
+        <label for="endereco">Endereço</label>
+        <input type="text" id="endereco" formControlName="endereco" />
+        <div
+          class="error"
+          *ngIf="
+            form.controls['endereco'].invalid &&
+            form.controls['endereco'].touched
+          "
+        >
+          {{ getErrorMessage("endereco") }}
+        </div>
+      </div>
+
+      <div>
+        <label for="numero">Número</label>
+        <input type="number" id="numero" formControlName="numero" />
+        <div
+          class="error"
+          *ngIf="
+            form.controls['numero'].invalid && form.controls['numero'].touched
+          "
+        >
+          {{ getErrorMessage("numero") }}
+        </div>
+      </div>
+
+      <div>
+        <label for="bairro">Bairro</label>
+        <input type="text" id="bairro" formControlName="bairro" />
+        <div
+          class="error"
+          *ngIf="
+            form.controls['bairro'].invalid && form.controls['bairro'].touched
+          "
+        >
+          {{ getErrorMessage("bairro") }}
+        </div>
+      </div>
+
+      <div>
+        <label for="cidade">Cidade</label>
+        <input type="text" id="cidade" formControlName="cidade" />
+        <div
+          class="error"
+          *ngIf="
+            form.controls['cidade'].invalid && form.controls['cidade'].touched
+          "
+        >
+          {{ getErrorMessage("cidade") }}
+        </div>
+      </div>
+
+      <div>
+        <label for="estado">Estado</label>
+        <input type="text" id="estado" formControlName="estado" />
+        <div
+          class="error"
+          *ngIf="
+            form.controls['estado'].invalid && form.controls['estado'].touched
+          "
+        >
+          {{ getErrorMessage("estado") }}
+        </div>
+      </div>
+
+      <button type="submit" [disabled]="form.invalid">Enviar</button>
+    </form>
+  </div>
+
